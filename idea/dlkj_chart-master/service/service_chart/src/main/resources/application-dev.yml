@@ -1,0 +1,26 @@
+server:
+  port: 8010
+spring:
+  application:
+    name: service_chart
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://110.42.203.240:3306/dlkj_chart?characterEncoding=utf-8&userUnicode=true&serverTimezone=Asia/Shanghai&useSSL=false
+    username: root
+    password: A123a123
+    hikari:
+      minimum-idle: 3
+      maximum-pool-size: 5
+      max-lifetime: 0
+  jackson:
+    time-zone: GMT+8
+    date-format: yyyy-MM-dd HH:mm:ss
+    default-property-inclusion: non_null
+  servlet:
+    multipart:
+      max-file-size: 1024MB
+      max-request-size: 2048MB
+#配置mybatisplus
+mybatis-plus:
+  mapper-locations: classpath:com/example/mapper/xml/*.xml
+
